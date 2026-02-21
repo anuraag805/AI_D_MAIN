@@ -23,6 +23,12 @@ const signupSchema = new mongoose.Schema(
             type: String,
             minlength: 6,
             required: true
+        },
+
+        gender: {
+            type: String,
+            enum: ['male', 'female'],
+            required: true
         }
     }, {
         timestamps: true
